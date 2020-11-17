@@ -10,7 +10,7 @@
 #' @return A String containing nucleotides at index position for sequences.
 #'
 createPosVec <- function(seqSet, index){
-  postion <- c()
+  position <- c()
 
   # Loop over each sequences and grab the nucleotide at index postion.
   for (i in 1: length(seqSet)){
