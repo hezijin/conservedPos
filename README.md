@@ -21,13 +21,15 @@ conservity of each position.
 You can install the released version of conservedPos
 
 ``` r
-install.packages("conservedPos")
-
-# install.packages("devtools")
-library(devtools)
-require(devtools)
-
+require("devtools")
 devtools::install_github("hezijin/conservedPos", build_vignettes = TRUE)
+library("conservedPos")
+```
+
+For tutorial how to use:
+
+``` r
+browseVignettes("conservedPos")
 ```
 
 ## Overview

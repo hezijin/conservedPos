@@ -27,13 +27,14 @@ The package will provide function to count nucleotides occurrances in each posit
 You can install the released version of conservedPos 
 
 ``` r
-install.packages("conservedPos")
-
-# install.packages("devtools")
-library(devtools)
-require(devtools)
-
+require("devtools")
 devtools::install_github("hezijin/conservedPos", build_vignettes = TRUE)
+library("conservedPos")
+
+```
+For tutorial how to use:
+```r
+browseVignettes("conservedPos")
 ```
 ## Overview
 The package contains 4 function to reformat and analyze the input sequences and 2 function to plot for the result.

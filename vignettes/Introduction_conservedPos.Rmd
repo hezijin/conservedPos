@@ -12,14 +12,14 @@ The package will provide function to count nucleotides occurrances in each posit
 
 ## Inputing data
 I recommend you to prepare your aligned sequence fasta file as the input. Usually you can blast a target sequence from NCBI blasttn and download the aligned sequences file from result page. Long sequence may take a long time to run the function. Although the function is not sensitive to the unequal length of the input sequence, a relatively equal and aligned set of sequences will increase the accuracy of calculating conserved nucleotide frequency in each site.
-```{r, include = FALSE}
+```r
 library(Biostrings)
 testseq <- readDNAStringSet("path to your file","fasta")
 
 ```
 
 ## Visualize the result
-```{r, include = FALSE}
+```r
 library(Biostrings)
 testseq <- readDNAStringSet("path to your file","fasta")
 # Or you can try sequence from data
