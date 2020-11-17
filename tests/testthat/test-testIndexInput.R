@@ -1,9 +1,8 @@
 context("Test function plotPartial index validity")
 
 test_that("Input Index out of range", {
-  testSeq <- DNAStringSet("AGAATATTTGCGATTGATTTGGCCAGCTGGTCTTCGA")
-  testSeq <- c(testSeq, "TGAAAATGAAAAAAA",
-               "TGAA")
+  data(testSeqUnequal)
+  testSeq <- testSeqUnequal
   conserV <- conservityTable(testSeq)
 
   message <- plotPartial(conserV, 1, 100)
@@ -13,9 +12,8 @@ test_that("Input Index out of range", {
 })
 
 test_that("first Index is larger", {
-  testSeq <- DNAStringSet("AGAATATTTGCGATTGATTTGGCCAGCTGGTCTTCGA")
-  testSeq <- c(testSeq, "TGAAAATGAAAAAAA",
-               "TGAA")
+  data(testSeqUnequal)
+  testSeq <- testSeqUnequal
   conserV <- conservityTable(testSeq)
 
   message <- plotPartial(conserV, 12, 5)

@@ -6,6 +6,12 @@
 \usage{
 plotOverall(conserV)
 }
+\arguments{
+\item{conserV}{a vector with serveral number of conservity}
+}
+\value{
+a plot to view the overall alignment's conservity
+}
 \description{
 This function plots the overall alignment's conservity
 using the conservity vector generated from the function

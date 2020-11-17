@@ -7,6 +7,16 @@ from user using the conservity vector.}
 \usage{
 plotPartial(conserV, firstIndex, lastIndex)
 }
+\arguments{
+\item{conserV}{a vector with serveral number of conservity}
+
+\item{firstIndex}{a number to point the start index of selected region}
+
+\item{lastIndex}{a number to point the end index of selected region}
+}
+\value{
+a plot to view the seleted region alignment's conservity
+}
 \description{
 This function plots the conservity for selected alignment region
 from user using the conservity vector.

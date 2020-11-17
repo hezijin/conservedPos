@@ -1,36 +1,32 @@
 context("Test functions in PositionCal.R")
-library(Biostrings)
+
 
 test_that("create correct Position Vec", {
-  testSeq <- DNAStringSet("AGAATATTTGCGATTGATTTGGCCAGCTGGTCTTCGA")
-  testSeq <- c(testSeq, "TGAAAATGAAAAAAATAATGATGGTTACACTGGTCA",
-               "TGAAAATGAAAAAAATAATGATGGTTACACTGGTCA")
+  data(testSeqShort)
+  testSeq <- testSeqShort
   pos <- createPosVec(testSeq, 1)
   expect_equal(pos, "ATT")
 })
 
 test_that("find correct conservity from a index", {
-  testSeq <- DNAStringSet("AGAATATTTGCGATTGATTTGGCCAGCTGGTCTTCGA")
-  testSeq <- c(testSeq, "TGAAAATGAAAAAAATAATGATGGTTACACTGGTCA",
-               "TGAAAATGAAAAAAATAATGATGGTTACACTGGTCA")
+  data(testSeqShort)
+  testSeq <- testSeqShort
   pos <- createPosVec(testSeq, 1)
   cons <- findConservityFromS(pos)
   expect_equal(cons, 2/3)
 })
 
 test_that("find correct max length in DNAStringSet", {
-  testSeq <- DNAStringSet("AGAATATTTGCGATTGATTTGGCCAGCTGGTCTTCGA")
-  testSeq <- c(testSeq, "TGAAAATGAAAAAAA",
-               "TGAA")
+  data(testSeqUnequal)
+  testSeq <- testSeqUnequal
   maxL <- findMaxLen(testSeq)
 
   expect_equal(maxL, 37)
 })
 
 test_that("check the conservity vector value at several index", {
-  testSeq <- DNAStringSet("AGAATATTTGCGATTGATTTGGCCAGCTGGTCTTCGA")
-  testSeq <- c(testSeq, "TGAAAATGAAAAAAA",
-               "TGAA")
+  data(testSeqUnequal)
+  testSeq <- testSeqUnequal
   conserV <- conservityTable(testSeq)
 
   expect_equal(conserV[37], 1)
