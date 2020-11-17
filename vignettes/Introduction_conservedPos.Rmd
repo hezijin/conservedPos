@@ -1,0 +1,33 @@
+---
+title: "Introduction_conservedPos"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction_conservedPos}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Introduction
+The package will provide function to count nucleotides occurrances in each position independently and calculates the frequency of the nucleotides in order to quantify the conservity of each position. You can use 2 plot function (plotOverall, plotPartial) to visualize the analysis from your input.
+
+## Inputing data
+I recommend you to prepare your aligned sequence fasta file as the input. Usually you can blast a target sequence from NCBI blasttn and download the aligned sequences file from result page. Long sequence may take a long time to run the function. Although the function is not sensitive to the unequal length of the input sequence, a relatively equal and aligned set of sequences will increase the accuracy of calculating conserved nucleotide frequency in each site.
+```{r, include = FALSE}
+library(Biostrings)
+testseq <- readDNAStringSet("path to your file","fasta")
+
+```
+
+## Visualize the result
+```{r, include = FALSE}
+library(Biostrings)
+testseq <- readDNAStringSet("path to your file","fasta")
+# Or you can try sequence from data
+# data(testSeqShort)
+# testSeq <- testSeqShort
+conserv <- conservityTable(testSeq)
+result1 <- plotOverall(conserv)
+result2 <- plotPartial(conserv, 1, 15)
+
+```
+

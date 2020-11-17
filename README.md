@@ -25,12 +25,35 @@ install.packages("conservedPos")
 
 # install.packages("devtools")
 library(devtools)
-require
+require(devtools)
 
 devtools::install_github("hezijin/conservedPos", build_vignettes = TRUE)
 ```
 
 ## Example
+
+## Contribution
+
+The idea of developing this package is inspired by PWM Viewing and
+Searching. The way of clear up and reformat sequence string in function
+createPosVec is referenced to many website (show in Reference section).
+The idea of function findConservityFromS comes from the function in
+Biostirngs package function NucleotideFrequencyAt, while my function
+avoids the limitation of the input (NucleotideFrequencyAt is not allowed
+to use stirngs with NA, which means length of the input sequences need
+to be equal).The function findMaxLen and conservityTable are written by
+me. The way of generate bar plot comes from R language Tutorial(show in
+Reference section) and used in function plotOverall and plotPartial.
+
+## Reference
+
+1.https://stackoverflow.com/questions/48632957/how-to-find-the-most-repeated-word-in-a-vector-with-r
+
+2.https://www.datamentor.io/r-programming/bar-plot/
+
+3.https://web.stanford.edu/class/bios221/labs/biostrings/lab\_1\_biostrings.html
+
+4.https://www.tutorialspoint.com/r/r\_bar\_charts.htm
 
 ## Acknowledgements
 
