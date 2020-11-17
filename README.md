@@ -59,13 +59,26 @@ Reference section) and used in function plotOverall and plotPartial.
 
 ## Reference
 
-1.https://stackoverflow.com/questions/48632957/how-to-find-the-most-repeated-word-in-a-vector-with-r
+1.  How to find the most repeated word in a vector with R
+    <https://stackoverflow.com/questions/48632957/how-to-find-the-most-repeated-word-in-a-vector-with-r>
 
-2.https://www.datamentor.io/r-programming/bar-plot/
+2.R Bar Plot <https://www.datamentor.io/r-programming/bar-plot/>
 
-3.https://web.stanford.edu/class/bios221/labs/biostrings/lab\_1\_biostrings.html
+3.Biostrings in R
+<https://web.stanford.edu/class/bios221/labs/biostrings/lab_1_biostrings.html>
 
-4.https://www.tutorialspoint.com/r/r\_bar\_charts.htm
+4.R - Bar Charts <https://www.tutorialspoint.com/r/r_bar_charts.htm>
+
+5.  H. Pagès, P. Aboyoun, R. Gentleman and S. DebRoy (2020). Biostrings:
+    Efficient manipulation of biological strings. R package version
+    2.58.0. <https://bioconductor.org/packages/Biostrings>
+
+6.  Orchestrating high-throughput genomic analysis with Bioconductor. W.
+    Huber, V.J. Carey, R. Gentleman, …, M. Morgan Nature Methods,
+    2015:12, 115.
+
+7.  SeqLogo: Sequence logos for DNA sequence alignments
+    <https://rdrr.io/bioc/seqLogo/>
 
 ## Acknowledgements
 
