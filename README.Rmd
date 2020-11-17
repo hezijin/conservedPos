@@ -54,6 +54,7 @@ The idea of developing this package is inspired by PWM Viewing and Searching. Th
 
 4.https://www.tutorialspoint.com/r/r_bar_charts.htm
 
+
 ## Acknowledgements
 
 This package was developed as part of an assessment for 2020BCB410H: Applied Bioinformatics, University of Toronto, Toronto,CANADA.

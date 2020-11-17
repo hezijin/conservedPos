@@ -30,7 +30,17 @@ require(devtools)
 devtools::install_github("hezijin/conservedPos", build_vignettes = TRUE)
 ```
 
-## Example
+## Overview
+
+The package contains 4 function to reformat and analyze the input
+sequences and 2 function to plot for the result. createPosVec() grabs
+the nucleotide for all of sequences at index position. Then in
+conservityTable(), it loops all of the index and calculate the most
+conserved nucleotide frequency through findConservityFromS().
+
+plotOverall() plots the overall alignment’s conservity using the
+conservity vector generated from the function conservityTable while
+plotPartial()plots the seleted region from users.
 
 ## Contribution
 
