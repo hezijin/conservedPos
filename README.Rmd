@@ -18,43 +18,25 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of conservedPos is to ...
+## Description
+Description: The goal of conservedPos package is to find important conserved sites for small target region by conducting a site-specific analysis for a set of aligned DNA sequences. 
+The package will provide function to count nucleotides occurrances in each position independently and calculates the frequency of the nucleotides in order to quantify the conservity of each position.
 
 ## Installation
 
-You can install the released version of conservedPos from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of conservedPos 
 
 ``` r
 install.packages("conservedPos")
-```
 
-And the development version from [GitHub](https://github.com/) with:
-
-``` r
 # install.packages("devtools")
-devtools::install_github("hezijin/conservedPos")
+library(devtools)
+require
+
+devtools::install_github("hezijin/conservedPos", build_vignettes = TRUE)
 ```
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+## Acknowledgements
 
-```{r example}
-library(conservedPos)
-## basic example code
-```
-
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
+This package was developed as part of an assessment for 2020BCB410H: Applied Bioinformatics, University of Toronto, Toronto,CANADA.

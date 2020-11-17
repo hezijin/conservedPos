@@ -4,8 +4,12 @@ Title: What the Package Does (Title Case)
 Version: 0.1.0
 Author: Who wrote it
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: The goal of conservedPos package is to find important conserved 
+  sites for small target region by conducting a site-specific analysis 
+  for a set of aligned DNA sequences. 
+  The package will provide function to count nucleotides occurrances 
+  in each position independently and calculates the frequency of the 
+  nucleotides in order to quantify the conservity of each position.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
