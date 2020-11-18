@@ -25,6 +25,7 @@ testseq <- readDNAStringSet("path to your file","fasta")
 # Or you can try sequence from data
 # data(testSeqShort)
 # testSeq <- testSeqShort
+devtools::load_all()
 conserv <- conservityTable(testSeq)
 result1 <- plotOverall(conserv)
 result2 <- plotPartial(conserv, 1, 15)
