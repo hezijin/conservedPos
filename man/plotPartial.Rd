@@ -21,3 +21,7 @@ a plot to view the seleted region alignment's conservity
 This function plots the conservity for selected alignment region
 from user using the conservity vector.
 }
+\examples{
+
+
+}

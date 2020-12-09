@@ -1,4 +1,11 @@
 library(shiny)
+# This layout of app is adapted from
+# app.R section. Tabsets(2020) Shiny in R studio
+# https://shiny.rstudio.com/gallery/tabsets.html
+# Other Reference:
+# Using sliders(2017) Shiny in R studio
+# https://shiny.rstudio.com/articles/sliders.html
+
 ui <- fluidPage(
   titlePanel("conservedPos"),
 
@@ -9,10 +16,14 @@ ui <- fluidPage(
 
       br(),
 
-      mainPanel(
+      sliderInput("range", "Index Range:",
+                  min = 1, max = 200,
+                  value = c(1,10))
 
-        actionButton("Calculate", "Calculate")
-      )
+
+
+        #actionButton("Calculate", "Calculate")
+
     ),
 
     mainPanel(
@@ -39,7 +50,7 @@ server <- function(input, output) {
     output$plot<- renderPlot({
       testSeq <- Biostrings::readBStringSet(input$file$datapath)
       mytable <- conservityTable(testSeq)
-      plotOverall(mytable)
+      plotPartial(mytable, input$range[1], input$range[2])
 
     })
 

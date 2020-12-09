@@ -11,7 +11,7 @@
 #'
 #' @importFrom graphics barplot
 plotOverall <- function(conserV){
-  barplot(conserV, xlab = "Position", ylab = "Conservity", col = "blue",
+  graphics::barplot(conserV, xlab = "Position", ylab = "Conservity", col = "blue",
           names.arg = c(1:length(conserV)), main="Conservity for Input Sequences")
 }
 
@@ -24,6 +24,9 @@ plotOverall <- function(conserV){
 #'
 #' @return a plot to view the seleted region alignment's conservity
 #'
+#' @examples
+#'
+#'
 #' @export
 #' @importFrom graphics barplot
 plotPartial <- function(conserV, firstIndex, lastIndex){
@@ -31,8 +34,8 @@ plotPartial <- function(conserV, firstIndex, lastIndex){
   if(firstIndex > maxL | lastIndex > maxL | firstIndex >= lastIndex){
     print("Invalid Index!")
   }else{
-    barplot(conserV[firstIndex:lastIndex], xlab = "Position", ylab = "Conservity", col = "blue",
-            names.arg = c(firstIndex:lastIndex), main="Conservity for Input Sequences")
+    graphics::barplot(conserV[firstIndex:lastIndex], xlab = "Position", ylab = "Conservity", col = "blue",
+            names.arg = c(firstIndex:lastIndex), main = "Plot of site conservity")
   }
 
 

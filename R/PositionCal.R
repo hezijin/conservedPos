@@ -9,6 +9,18 @@
 #'
 #' @return A String containing nucleotides at index position for sequences.
 #'
+#' @examples
+#' # Example 1: Use a sequence set with short sequence from data
+#' # Create a createPosVec for testSeqShort at index 1.
+#'
+#' data(testSeqShort)
+#' createPosVec <- function(testSeqShort, 1)
+#' createPosVec
+#'
+#' # Example 2: Use a raw data sequence set
+#' rawSeq <- Biostrings::readBStringSet("./inst/extdata/sampleSeq3.txt","fasta")
+#' createPosVec <- function(rawSeq, 10)
+#' createPosVec
 createPosVec <- function(seqSet, index){
   position <- c()
 
