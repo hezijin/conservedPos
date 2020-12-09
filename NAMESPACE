@@ -3,6 +3,7 @@
 export(conservityTable)
 export(findConservedNul)
 export(findConservityFromS)
+export(findMaxLen)
 export(plotPartial)
 export(runconservedPos)
 importFrom(graphics,barplot)

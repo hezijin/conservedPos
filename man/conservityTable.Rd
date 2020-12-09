@@ -11,9 +11,27 @@ conservityTable(seqSet)
 \item{seqSet}{seqSet A set of aligned sequence read from fasta file}
 }
 \value{
-a vector contains each position's
+a vector contains each position's highest frequency
 }
 \description{
 This function calculates the conservity of all positions for input
 sequences and generate a vector contains each position's conservity
+}
+\examples{
+# Example 1 : Create conservity Table for testSeqShort.
+data(testSeqShort)
+testSeq <- testSeqShort
+table  <- conservityTable(testSeq)
+# You will see a vector containing 37 numbers (max length), these numbers are
+# the highest frequency for each position.
+table
+
+# Example 2: Create conservity Table for another sequence set, a raw data
+# sampleSeq3.txt. This should takes longer time to run.
+rawSeq <- Biostrings::readBStringSet("./inst/extdata/sampleSeq3.txt","fasta")
+table <- conservityTable(rawSeq)
+# Should have 140 numbers(max length of rawSeq), and
+# each number is the the highest frequency for each position
+table
+
 }

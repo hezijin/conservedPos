@@ -20,15 +20,18 @@ to create a XString sequence for a collection of this nucleotide. Then
 the function reformats the Xstring into a string clean it up.
 }
 \examples{
-# Example 1: Use a sequence set with short sequence from data
-# Create a createPosVec for testSeqShort at index 1.
+# Example 1: Use a sequence set with short sequence from data,
+# create a string containing nucleotides at index 1 for this sequence set.
 
 data(testSeqShort)
-createPosVec <- function(testSeqShort, 1)
-createPosVec
+testSeq <- testSeqShort
+position1Vec <- createPosVec(testSeq, 1)
+position1Vec # "ATT"
 
-# Example 2: Use a raw data sequence set
+# Example 2: Use a raw data sequence set, create a string containing
+# nucleotides at index 10 for these raw data sequences.
+
 rawSeq <- Biostrings::readBStringSet("./inst/extdata/sampleSeq3.txt","fasta")
-createPosVec <- function(rawSeq, 10)
-createPosVec
+position10Vec <- createPosVec(rawSeq, 10)
+position10Vec <- "TTTCACTACCAA"
 }

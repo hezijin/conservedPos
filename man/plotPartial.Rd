@@ -22,6 +22,25 @@ This function plots the conservity for selected alignment region
 from user using the conservity vector.
 }
 \examples{
+# Example 1: Plot a conservity against of each position for testSeqShort
+# from position 2 to 15
+data(testSeqShort)
+testSeq <- testSeqShort
+# Use conservityTable() to create table for testSeqShort,
+# and pass it to plotOverall() for plotting
+table  <- conservityTable(testSeq)
+oPar <- par(mar = c(2, 4, 2, 1)) # Set plot parameters to layout plot in center.
+plotPartial(table, 2, 15)
 
+# Example 2: Plot a conservity against of each position for raw data
+# from position 50 to 100
+# sampleSeq3.txt. This should takes longer time to run.
+rawSeq <- Biostrings::readBStringSet("./inst/extdata/sampleSeq3.txt","fasta")
+
+# Use conservityTable() to create table for rawSeq,
+# and pass it to plotOverall() for plotting
+table  <- conservityTable(testSeq)
+oPar <- par(mar = c(2, 4, 2, 1)) # Set plot parameters to layout plot in center.
+plotPartial(table, 50, 100)
 
 }

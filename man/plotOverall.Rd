@@ -17,3 +17,27 @@ This function plots the overall alignment's conservity
 using the conservity vector generated from the function
 conservityTable.
 }
+\examples{
+
+# Example 1: Plot a conservity against of each position for testSeqShort
+
+data(testSeqShort)
+testSeq <- testSeqShort
+
+# Use conservityTable() to create table for testSeqShort,
+# and pass it to plotOverall() for plotting
+table  <- conservityTable(testSeq)
+oPar <- par(mar = c(2, 4, 2, 1)) # Set plot parameters to layout plot in center.
+plotOverall(table)
+
+# Example 2: Plot a conservity against of each position for raw data
+# sampleSeq3.txt. This should takes longer time to run.
+rawSeq <- Biostrings::readBStringSet("./inst/extdata/sampleSeq3.txt","fasta")
+
+# Use conservityTable() to create table for rawSeq,
+# and pass it to plotOverall() for plotting
+table <- conservityTable(rawSeq)
+oPar <- par(mar = c(2, 4, 2, 1)) # Set plot parameters to layout plot in center.
+plotOverall(table)
+
+}
