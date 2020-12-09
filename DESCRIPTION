@@ -23,5 +23,6 @@ Depends:
 Imports: 
     Biostrings,
     BiocGenerics,
-    graphics
+    graphics,
+    shiny
 VignetteBuilder: knitr

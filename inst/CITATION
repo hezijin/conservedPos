@@ -1,0 +1,12 @@
+citHeader("To cite conservedPos in publications use:")
+
+citEntry(
+  entry    = "Unpublished",
+  title    = "conservedPos: Conserved Position Analysis Tool",
+  author   = "Zijin He",
+  note     = "Unpublished",
+  year     = "2020",
+  textVersion = paste(
+"Zijin, H.(2020) conservedPos: Conserved Position Analysis Tool. Unpublished. URL https://github.com/hezijin/conservedPos"
+  )
+)

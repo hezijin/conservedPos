@@ -28,12 +28,26 @@ createPosVec <- function(seqSet, index){
   return (position)
 }
 
+#' This function finds the nucleotide that has highest frequency of
+#' in input string.
+#'
+#' @param str A string containing character nucleotides
+#'
+#' @return  Return a vector that has one or more nucleotides
+#'          with highest frequency
+#' @export
+findConservedNul <- function(str){
+  split <- strsplit(str, "")
+  nul <- names(which(table(split) == max(table(split))))
+  return(nul)
+
+}
 #' This function finds the highest frequency of nucleotide in input string.
 #'
 #' @param str A string containing character nucleotides
 #'
 #' @return  Return a numeric value for highest frequency
-#'
+#' @export
 findConservityFromS <- function(str){
 
   # Split the str into character vector and find max occurances
@@ -70,6 +84,7 @@ findMaxLen <- function(seqSet){
 #'
 #' @return a vector contains each position's
 #'
+#' @export
 conservityTable <- function(seqSet){
   # Find max length of sequences in seqSet, it is used as the max range of
   # position to compute the conservity. It also guarantees that each position

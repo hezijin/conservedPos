@@ -23,6 +23,7 @@ plotOverall <- function(conserV){
 #' @param lastIndex a number to point the end index of selected region
 #'
 #' @return a plot to view the seleted region alignment's conservity
+#'
 #' @export
 #' @importFrom graphics barplot
 plotPartial <- function(conserV, firstIndex, lastIndex){
