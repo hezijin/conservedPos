@@ -39,7 +39,7 @@ Example 1: using raw data, create conservity table and plot partially:
 ```r
 findpath <- system.file("extdata", "sampleSeq3.txt", package = "conservedPos")
 rawSeq <- Biostrings::readBStringSet(findpath,"fasta")
-table  <- conservityTable(testSeq)
+table  <- conservityTable(rawSeq)
 oPar <- par(mar = c(2, 4, 2, 1))
 plotPartial(table, 1, 10)
 ```

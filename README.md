@@ -9,12 +9,12 @@
 
 ## Description
 
-Description: The goal of conservedPos package is to find important
-conserved sites for small target region by conducting a site-specific
-analysis for a set of aligned DNA sequences. The package will provide
-function to count nucleotides occurrances in each position independently
-and calculates the frequency of the nucleotides in order to quantify the
-conservity of each position.
+The goal of conservedPos package is to find important conserved sites
+for small target region by conducting a site-specific analysis for a set
+of aligned DNA sequences. The package will provide function to count
+nucleotides occurrances in each position independently and calculates
+the frequency of the nucleotides in order to quantify the conservity of
+each position.
 
 ## Installation
 
