@@ -16,7 +16,7 @@ ui <- fluidPage(
 
       br(),
 
-      sliderInput("range", "Choose plot pange in max length of conservity table)",
+      sliderInput("range", "Choose plot pange in max length of conservity table",
                   min = 1, max = 200,
                   value = c(1,10)),
       br(),
