@@ -16,13 +16,15 @@ ui <- fluidPage(
 
       br(),
 
-      sliderInput("range", "Index Range:",
+      sliderInput("range", "Choose plot pange in max length of conservity table)",
                   min = 1, max = 200,
-                  value = c(1,10))
+                  value = c(1,10)),
+      br(),
 
+      textInput("site",
+                "Choose a specific site",
+                value = 1)
 
-
-        #actionButton("Calculate", "Calculate")
 
     ),
 
@@ -44,6 +46,8 @@ server <- function(input, output) {
     output$table<- renderPrint({
       testSeq <- Biostrings::readBStringSet(input$file$datapath)
       mytable <- conservityTable(testSeq)
+      cat("Conservity for uploaded sequences set, max length",findMaxLen(testSeq))
+      cat("\n")
       mytable
     })
 
@@ -56,7 +60,7 @@ server <- function(input, output) {
 
     output$site<- renderPrint({
       testSeq <- Biostrings::readBStringSet(input$file$datapath)
-      posVec <- createPosVec(testSeq,2)
+      posVec <- createPosVec(testSeq,as.numeric(input$site))
       cat("Nucleotide/Residue with highest frequency at position:", findConservedNul(posVec))
       cat(" with frequency", findConservityFromS(posVec))
       #
