@@ -2,7 +2,7 @@ Package: conservedPos
 Type: Package
 Title: Use conservedPos find important conserved sites for small target region
 Version: 0.1.0
-Author: Zijin He
+Authors@R: person("H", "Zijin", email = "zijin.he@mail.utoronto.ca", role = c("aut", "cre"))
 Maintainer: Zijin He <zijin.he@mail.utoronto.ca>
 Description: The goal of conservedPos package is to find important conserved 
   sites for small target region by conducting a site-specific analysis 

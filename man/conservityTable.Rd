@@ -28,7 +28,8 @@ table
 
 # Example 2: Create conservity Table for another sequence set, a raw data
 # sampleSeq3.txt. This should takes longer time to run.
-rawSeq <- Biostrings::readBStringSet("./inst/extdata/sampleSeq3.txt","fasta")
+findpath <- system.file("extdata", "sampleSeq3.txt", package = "conservedPos")
+rawSeq <- Biostrings::readBStringSet(findpath,"fasta")
 table <- conservityTable(rawSeq)
 # Should have 140 numbers(max length of rawSeq), and
 # each number is the the highest frequency for each position

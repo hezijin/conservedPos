@@ -20,10 +20,11 @@
 #'
 #' # Example 2: Use a raw data sequence set, create a string containing
 #' # nucleotides at index 10 for these raw data sequences.
-#'
-#' rawSeq <- Biostrings::readBStringSet("./inst/extdata/sampleSeq3.txt","fasta")
+#' findpath <- system.file("extdata", "sampleSeq3.txt", package = "conservedPos")
+#' rawSeq <- Biostrings::readBStringSet(findpath,"fasta")
 #' position10Vec <- createPosVec(rawSeq, 10)
 #' position10Vec <- "TTTCACTACCAA"
+#' @export
 createPosVec <- function(seqSet, index){
   position <- c()
 
@@ -114,13 +115,14 @@ findConservityFromS <- function(str){
 #'
 #' @return A numeric value of the max length of sequence for seqSet
 #'
-#' @example
+#' @examples
 #' # Example 1: find the max length of a sequence set retrieved from raw data
-#' rawSeq <- Biostrings::readBStringSet("./inst/extdata/sampleSeq3.txt","fasta")
+#' findpath <- system.file("extdata", "sampleSeq3.txt", package = "conservedPos")
+#' rawSeq <- Biostrings::readBStringSet(findpath,"fasta")
 #' maxL <- findMaxLen(rawSeq)
 #' maxL # 140
 #'
-#' Example 2: find the max length of a sequence set retrieved from data
+#' # Example 2: find the max length of a sequence set retrieved from data
 #' data(testSeqShort)
 #' testSeq <- testSeqShort
 #' maxL <- findMaxLen(testSeq)
@@ -156,7 +158,8 @@ findMaxLen <- function(seqSet){
 #'
 #' # Example 2: Create conservity Table for another sequence set, a raw data
 #' # sampleSeq3.txt. This should takes longer time to run.
-#' rawSeq <- Biostrings::readBStringSet("./inst/extdata/sampleSeq3.txt","fasta")
+#' findpath <- system.file("extdata", "sampleSeq3.txt", package = "conservedPos")
+#' rawSeq <- Biostrings::readBStringSet(findpath,"fasta")
 #' table <- conservityTable(rawSeq)
 #' # Should have 140 numbers(max length of rawSeq), and
 #' # each number is the the highest frequency for each position

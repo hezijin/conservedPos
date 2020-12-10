@@ -15,3 +15,17 @@ A numeric value of the max length of sequence for seqSet
 \description{
 This function finds the max length of sequence for input sequence set
 }
+\examples{
+# Example 1: find the max length of a sequence set retrieved from raw data
+findpath <- system.file("extdata", "sampleSeq3.txt", package = "conservedPos")
+rawSeq <- Biostrings::readBStringSet(findpath,"fasta")
+maxL <- findMaxLen(rawSeq)
+maxL # 140
+
+# Example 2: find the max length of a sequence set retrieved from data
+data(testSeqShort)
+testSeq <- testSeqShort
+maxL <- findMaxLen(testSeq)
+maxL # 37
+
+}

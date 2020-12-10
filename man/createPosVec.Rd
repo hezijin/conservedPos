@@ -30,8 +30,8 @@ position1Vec # "ATT"
 
 # Example 2: Use a raw data sequence set, create a string containing
 # nucleotides at index 10 for these raw data sequences.
-
-rawSeq <- Biostrings::readBStringSet("./inst/extdata/sampleSeq3.txt","fasta")
+findpath <- system.file("extdata", "sampleSeq3.txt", package = "conservedPos")
+rawSeq <- Biostrings::readBStringSet(findpath,"fasta")
 position10Vec <- createPosVec(rawSeq, 10)
 position10Vec <- "TTTCACTACCAA"
 }

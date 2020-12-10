@@ -35,7 +35,8 @@ plotPartial(table, 2, 15)
 # Example 2: Plot a conservity against of each position for raw data
 # from position 50 to 100
 # sampleSeq3.txt. This should takes longer time to run.
-rawSeq <- Biostrings::readBStringSet("./inst/extdata/sampleSeq3.txt","fasta")
+findpath <- system.file("extdata", "sampleSeq3.txt", package = "conservedPos")
+rawSeq <- Biostrings::readBStringSet(findpath,"fasta")
 
 # Use conservityTable() to create table for rawSeq,
 # and pass it to plotOverall() for plotting

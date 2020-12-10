@@ -24,7 +24,8 @@
 #'
 #' # Example 2: Plot a conservity against of each position for raw data
 #' # sampleSeq3.txt. This should takes longer time to run.
-#' rawSeq <- Biostrings::readBStringSet("./inst/extdata/sampleSeq3.txt","fasta")
+#' findpath <- system.file("extdata", "sampleSeq3.txt", package = "conservedPos")
+#' rawSeq <- Biostrings::readBStringSet(findpath,"fasta")
 #'
 #' # Use conservityTable() to create table for rawSeq,
 #' # and pass it to plotOverall() for plotting
@@ -32,6 +33,7 @@
 #' oPar <- par(mar = c(2, 4, 2, 1)) # Set plot parameters to layout plot in center.
 #' plotOverall(table)
 #'
+#' @export
 #' @importFrom graphics barplot
 plotOverall <- function(conserV){
   graphics::barplot(conserV, xlab = "Position", ylab = "Conservity", col = "blue",
@@ -61,7 +63,8 @@ plotOverall <- function(conserV){
 #' # Example 2: Plot a conservity against of each position for raw data
 #' # from position 50 to 100
 #' # sampleSeq3.txt. This should takes longer time to run.
-#' rawSeq <- Biostrings::readBStringSet("./inst/extdata/sampleSeq3.txt","fasta")
+#' findpath <- system.file("extdata", "sampleSeq3.txt", package = "conservedPos")
+#' rawSeq <- Biostrings::readBStringSet(findpath,"fasta")
 #'
 #' # Use conservityTable() to create table for rawSeq,
 #' # and pass it to plotOverall() for plotting
