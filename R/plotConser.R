@@ -33,6 +33,16 @@
 #' oPar <- par(mar = c(2, 4, 2, 1)) # Set plot parameters to layout plot in center.
 #' plotOverall(table)
 #'
+#' @references
+#' R - Bar Charts: Bar:Chart Labels, Title and Colors.
+#' \emph{Tutorialpoints-R Tutorial} \href{https://www.tutorialspoint.com/r/r_bar_charts.htm}{Link}
+#'
+#' Silva, A. (2020) TestingPackage: An Example R Package For BCB410H. Unpublished.
+#' \href{https://github.com/anjalisilva/TestingPackage}{Link}
+#'
+#' R Bar Plot (2018) DataMentor
+#' \emph{Getting Started in Data Science With R } \href{https://www.datamentor.io/r-programming/bar-plot/}{Link}
+#'
 #' @export
 #' @importFrom graphics barplot
 plotOverall <- function(conserV){
@@ -71,6 +81,17 @@ plotOverall <- function(conserV){
 #' table  <- conservityTable(testSeq)
 #' oPar <- par(mar = c(2, 4, 2, 1)) # Set plot parameters to layout plot in center.
 #' plotPartial(table, 50, 100)
+#'
+#'
+#' @references
+#'R - Bar Charts: Bar Chart Labels, Title and Colors.
+#' \emph{Tutorialpoints-R Tutorial} \href{https://www.tutorialspoint.com/r/r_bar_charts.htm}{Link}
+#'
+#' Silva, A. (2020) TestingPackage: An Example R Package For BCB410H. Unpublished.
+#' \href{https://github.com/anjalisilva/TestingPackage}{Link}
+#'
+#' R Bar Plot (2018) DataMentor
+#' \emph{Getting Started in Data Science With R } \href{https://www.datamentor.io/r-programming/bar-plot/}{Link}
 #'
 #' @export
 #' @importFrom graphics barplot

@@ -67,6 +67,10 @@ createPosVec <- function(seqSet, index){
 #' position1Vec <- createPosVec(testSeq, 1)
 #' findConservedNul(position1Vec) # "T"
 #'
+#' @references
+#' Antonis. (2018) How to find the most repeated word in a vector with R
+#' \emph{Stack oveflow}  \href{https://stackoverflow.com/questions/48632957/how-to-find-the-most-repeated-word-in-a-vector-with-r
+#' }{Link}
 #'
 #' @export
 findConservedNul <- function(str){
